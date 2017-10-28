@@ -69,16 +69,61 @@
         "nullable": "YES"
       }
     },
-    "batchstatus": {
-      "type": "String",
+    "batchprocessingbegan": {
+      "type": "Boolean",
       "required": false,
       "length": 250,
       "precision": null,
       "scale": null,
       "postgresql": {
-        "columnName": "batchstatus",
-        "dataType": "character varying",
-        "dataLength": 250,
+        "columnName": "batchprocessingbegan",
+        "dataType": "boolean",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "batchprocessingended": {
+      "type": "Boolean",
+      "required": false,
+      "length": 250,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "batchprocessingended",
+        "dataType": "boolean",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "batchprocessingbeganat": {
+      "type": "String",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "batchprocessingbeganat",
+        "dataType": "timestamp without time zone",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "batchprocessingendedat": {
+      "type": "String",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "batchprocessingendedat",
+        "dataType": "timestamp without time zone",
+        "dataLength": null,
         "dataPrecision": null,
         "dataScale": null,
         "nullable": "YES"
@@ -107,36 +152,6 @@
       "scale": null,
       "postgresql": {
         "columnName": "modifiedat",
-        "dataType": "timestamp without time zone",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "receivedat": {
-      "type": "String",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "receivedat",
-        "dataType": "timestamp without time zone",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "processingfinishedat": {
-      "type": "String",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "processingfinishedat",
         "dataType": "timestamp without time zone",
         "dataLength": null,
         "dataPrecision": null,
