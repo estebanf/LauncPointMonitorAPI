@@ -309,29 +309,14 @@
         "nullable": "YES"
       }
     },
-    "isostate": {
-      "type": "String",
-      "required": false,
-      "length": 250,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "isostate",
-        "dataType": "character varying",
-        "dataLength": 250,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "receivediso": {
+    "isoreceivedat": {
       "type": "String",
       "required": false,
       "length": null,
       "precision": null,
       "scale": null,
       "postgresql": {
-        "columnName": "receivediso",
+        "columnName": "isoreceivedat",
         "dataType": "timestamp without time zone",
         "dataLength": null,
         "dataPrecision": null,
@@ -339,14 +324,14 @@
         "nullable": "YES"
       }
     },
-    "beganisoprocessing": {
+    "isoprocessingbeganat": {
       "type": "String",
       "required": false,
       "length": null,
       "precision": null,
       "scale": null,
       "postgresql": {
-        "columnName": "beganisoprocessing",
+        "columnName": "isoprocessingbeganat",
         "dataType": "timestamp without time zone",
         "dataLength": null,
         "dataPrecision": null,
@@ -354,14 +339,14 @@
         "nullable": "YES"
       }
     },
-    "foundduplicateiso": {
+    "isoduplicatefoundat": {
       "type": "String",
       "required": false,
       "length": null,
       "precision": null,
       "scale": null,
       "postgresql": {
-        "columnName": "foundduplicateiso",
+        "columnName": "isoduplicatefoundat",
         "dataType": "timestamp without time zone",
         "dataLength": null,
         "dataPrecision": null,
@@ -369,14 +354,14 @@
         "nullable": "YES"
       }
     },
-    "fetchedisodata": {
+    "isodatafetchedat": {
       "type": "String",
       "required": false,
       "length": null,
       "precision": null,
       "scale": null,
       "postgresql": {
-        "columnName": "fetchedisodata",
+        "columnName": "isodatafetchedat",
         "dataType": "timestamp without time zone",
         "dataLength": null,
         "dataPrecision": null,
@@ -384,14 +369,14 @@
         "nullable": "YES"
       }
     },
-    "senttoiso": {
+    "isosentat": {
       "type": "String",
       "required": false,
       "length": null,
       "precision": null,
       "scale": null,
       "postgresql": {
-        "columnName": "senttoiso",
+        "columnName": "isosentat",
         "dataType": "timestamp without time zone",
         "dataLength": null,
         "dataPrecision": null,
