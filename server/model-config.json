@@ -27,6 +27,6 @@
   },
   "casetracking": {
     "dataSource": "psql",
-    "public": false
+    "public": true
   }
 }
