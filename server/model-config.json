@@ -28,5 +28,9 @@
   "casetracking": {
     "dataSource": "psql",
     "public": true
+  },
+  "iqtracking": {
+    "dataSource": "psql",
+    "public": true
   }
 }
