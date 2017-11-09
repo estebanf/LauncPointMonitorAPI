@@ -1,0 +1,327 @@
+{
+  "name": "casetracking",
+  "options": {
+    "idInjection": false,
+    "postgresql": {
+      "schema": "public",
+      "table": "casetracking"
+    }
+  },
+  "properties": {
+    "caseid": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 32,
+      "scale": 0,
+      "postgresql": {
+        "columnName": "caseid",
+        "dataType": "integer",
+        "dataLength": null,
+        "dataPrecision": 32,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "isoindicator": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 32,
+      "scale": 0,
+      "postgresql": {
+        "columnName": "isoindicator",
+        "dataType": "integer",
+        "dataLength": null,
+        "dataPrecision": 32,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "score": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 32,
+      "scale": 0,
+      "postgresql": {
+        "columnName": "score",
+        "dataType": "integer",
+        "dataLength": null,
+        "dataPrecision": 32,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "accidentdate": {
+      "type": "String",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "accidentdate",
+        "dataType": "timestamp without time zone",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "benefitamount": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 32,
+      "scale": 0,
+      "postgresql": {
+        "columnName": "benefitamount",
+        "dataType": "integer",
+        "dataLength": null,
+        "dataPrecision": 32,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "fundingsource": {
+      "type": "String",
+      "required": false,
+      "length": 250,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "fundingsource",
+        "dataType": "character varying",
+        "dataLength": 250,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "lob": {
+      "type": "String",
+      "required": false,
+      "length": 250,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "lob",
+        "dataType": "character varying",
+        "dataLength": 250,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "state": {
+      "type": "String",
+      "required": false,
+      "length": 250,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "state",
+        "dataType": "character varying",
+        "dataLength": 250,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "workcomp": {
+      "type": "String",
+      "required": false,
+      "length": 250,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "workcomp",
+        "dataType": "character varying",
+        "dataLength": 250,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "casestatus": {
+      "type": "String",
+      "required": false,
+      "length": 250,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "casestatus",
+        "dataType": "character varying",
+        "dataLength": 250,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "casesource": {
+      "type": "String",
+      "required": false,
+      "length": 250,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "casesource",
+        "dataType": "character varying",
+        "dataLength": 250,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "casetype": {
+      "type": "String",
+      "required": false,
+      "length": 250,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "casetype",
+        "dataType": "character varying",
+        "dataLength": 250,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "batchid": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 32,
+      "scale": 0,
+      "postgresql": {
+        "columnName": "batchid",
+        "dataType": "integer",
+        "dataLength": null,
+        "dataPrecision": 32,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "casereceived": {
+      "type": "Boolean",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "casereceived",
+        "dataType": "boolean",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "caseidentified": {
+      "type": "Boolean",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "caseidentified",
+        "dataType": "boolean",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "casereceivedat": {
+      "type": "String",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "casereceivedat",
+        "dataType": "timestamp without time zone",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "caseidentifiedat": {
+      "type": "String",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "caseidentifiedat",
+        "dataType": "timestamp without time zone",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "pid": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 32,
+      "scale": 0,
+      "postgresql": {
+        "columnName": "pid",
+        "dataType": "integer",
+        "dataLength": null,
+        "dataPrecision": 32,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "pdid": {
+      "type": "String",
+      "required": false,
+      "length": 250,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "pdid",
+        "dataType": "character varying",
+        "dataLength": 250,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "createdat": {
+      "type": "String",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "createdat",
+        "dataType": "timestamp without time zone",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "modifiedat": {
+      "type": "String",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "modifiedat",
+        "dataType": "timestamp without time zone",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    }
+  }
+}
