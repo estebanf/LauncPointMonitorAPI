@@ -17,11 +17,27 @@
     "dataSource": "psql",
     "public": true
   },
-  "ISOCases": {
+  "isoresponsetracking": {
     "dataSource": "psql",
     "public": true
   },
-  "isoresponsetracking": {
+  "casetracking": {
+    "dataSource": "psql",
+    "public": true
+  },
+  "iqtracking": {
+    "dataSource": "psql",
+    "public": true
+  },
+  "iqlettertracking": {
+    "dataSource": "psql",
+    "public": true
+  },
+  "isotracking": {
+    "dataSource": "psql",
+    "public": true
+  },
+  "ISOCases": {
     "dataSource": "psql",
     "public": true
   },

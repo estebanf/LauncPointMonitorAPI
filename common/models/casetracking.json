@@ -1,56 +1,27 @@
 {
-  "name": "ISOCases",
+  "name": "casetracking",
   "options": {
     "idInjection": false,
     "postgresql": {
       "schema": "public",
-      "table": "ISOCases"
+      "table": "casetracking"
     }
   },
   "properties": {
-    "batchid": {
-      "type": "Number",
-      "required": false,
-      "length": null,
-      "precision": 32,
-      "scale": 0,
+    "casetrackingid": {
+      "type": "String",
+      "id": 1,
+      "required": true,
+      "length": 250,
+      "precision": null,
+      "scale": null,
       "postgresql": {
-        "columnName": "batchid",
-        "dataType": "integer",
-        "dataLength": null,
-        "dataPrecision": 32,
-        "dataScale": 0,
-        "nullable": "YES"
-      }
-    },
-    "parentpid": {
-      "type": "Number",
-      "required": false,
-      "length": null,
-      "precision": 32,
-      "scale": 0,
-      "postgresql": {
-        "columnName": "parentpid",
-        "dataType": "integer",
-        "dataLength": null,
-        "dataPrecision": 32,
-        "dataScale": 0,
-        "nullable": "YES"
-      }
-    },
-    "isopid": {
-      "type": "Number",
-      "required": false,
-      "length": null,
-      "precision": 32,
-      "scale": 0,
-      "postgresql": {
-        "columnName": "isopid",
-        "dataType": "integer",
-        "dataLength": null,
-        "dataPrecision": 32,
-        "dataScale": 0,
-        "nullable": "YES"
+        "columnName": "casetrackingid",
+        "dataType": "character varying",
+        "dataLength": 250,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "NO"
       }
     },
     "caseid": {
@@ -233,6 +204,21 @@
         "nullable": "YES"
       }
     },
+    "batchid": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 32,
+      "scale": 0,
+      "postgresql": {
+        "columnName": "batchid",
+        "dataType": "integer",
+        "dataLength": null,
+        "dataPrecision": 32,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
     "casereceived": {
       "type": "Boolean",
       "required": false,
@@ -293,14 +279,29 @@
         "nullable": "YES"
       }
     },
-    "requestid": {
+    "pid": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 32,
+      "scale": 0,
+      "postgresql": {
+        "columnName": "pid",
+        "dataType": "integer",
+        "dataLength": null,
+        "dataPrecision": 32,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "pdid": {
       "type": "String",
       "required": false,
       "length": 250,
       "precision": null,
       "scale": null,
       "postgresql": {
-        "columnName": "requestid",
+        "columnName": "pdid",
         "dataType": "character varying",
         "dataLength": 250,
         "dataPrecision": null,
@@ -308,29 +309,14 @@
         "nullable": "YES"
       }
     },
-    "isoreceived": {
-      "type": "Boolean",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "isoreceived",
-        "dataType": "boolean",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "isoreceivedat": {
+    "createdat": {
       "type": "String",
       "required": false,
       "length": null,
       "precision": null,
       "scale": null,
       "postgresql": {
-        "columnName": "isoreceivedat",
+        "columnName": "createdat",
         "dataType": "timestamp without time zone",
         "dataLength": null,
         "dataPrecision": null,
@@ -338,119 +324,14 @@
         "nullable": "YES"
       }
     },
-    "isoprocessingbegan": {
-      "type": "Boolean",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "isoprocessingbegan",
-        "dataType": "boolean",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "isoprocessingbeganat": {
+    "modifiedat": {
       "type": "String",
       "required": false,
       "length": null,
       "precision": null,
       "scale": null,
       "postgresql": {
-        "columnName": "isoprocessingbeganat",
-        "dataType": "timestamp without time zone",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "isoduplicatefound": {
-      "type": "Boolean",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "isoduplicatefound",
-        "dataType": "boolean",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "isoduplicatefoundat": {
-      "type": "String",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "isoduplicatefoundat",
-        "dataType": "timestamp without time zone",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "isodatafetched": {
-      "type": "Boolean",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "isodatafetched",
-        "dataType": "boolean",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "isodatafetchedat": {
-      "type": "String",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "isodatafetchedat",
-        "dataType": "timestamp without time zone",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "isosent": {
-      "type": "Boolean",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "isosent",
-        "dataType": "boolean",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "isosentat": {
-      "type": "String",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "isosentat",
+        "columnName": "modifiedat",
         "dataType": "timestamp without time zone",
         "dataLength": null,
         "dataPrecision": null,
@@ -460,7 +341,18 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "batchtracking": {
+      "type": "belongsTo",
+      "model": "batchtracking",
+      "foreignKey": "batchid"
+    },
+    "isotrackings": {
+      "type": "hasMany",
+      "model": "isotracking",
+      "foreignKey": "parentpid"
+    }
+  },
   "acls": [],
   "methods": {}
 }

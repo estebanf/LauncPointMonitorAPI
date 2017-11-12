@@ -10,88 +10,43 @@
   "properties": {
     "pid": {
       "type": "Number",
-      "required": false,
-      "length": null,
-      "precision": 64,
-      "scale": 0,
       "id": 1,
+      "required": true,
+      "length": null,
+      "precision": 32,
+      "scale": 0,
       "postgresql": {
         "columnName": "pid",
-        "dataType": "bigint",
+        "dataType": "integer",
         "dataLength": null,
-        "dataPrecision": 64,
+        "dataPrecision": 32,
         "dataScale": 0,
         "nullable": "NO"
-      }
-    },
-    "batchid": {
-      "type": "Number",
-      "required": false,
-      "length": null,
-      "precision": 64,
-      "scale": 0,
-      "postgresql": {
-        "columnName": "batchid",
-        "dataType": "bigint",
-        "dataLength": null,
-        "dataPrecision": 64,
-        "dataScale": 0,
-        "nullable": "YES"
       }
     },
     "caseid": {
       "type": "Number",
       "required": false,
       "length": null,
-      "precision": 64,
+      "precision": 32,
       "scale": 0,
       "postgresql": {
         "columnName": "caseid",
-        "dataType": "bigint",
+        "dataType": "integer",
         "dataLength": null,
-        "dataPrecision": 64,
+        "dataPrecision": 32,
         "dataScale": 0,
         "nullable": "YES"
       }
     },
-    "iqReceived": {
+    "iqreceived": {
       "type": "Boolean",
       "required": false,
-      "length": 250,
+      "length": null,
       "precision": null,
       "scale": null,
       "postgresql": {
         "columnName": "iqreceived",
-        "dataType": "boolean",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "iqHold": {
-      "type": "Boolean",
-      "required": false,
-      "length": 250,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "iqhold",
-        "dataType": "boolean",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "iqCompleted": {
-      "type": "Boolean",
-      "required": false,
-      "length": 250,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "iqcompleted",
         "dataType": "boolean",
         "dataLength": null,
         "dataPrecision": null,
@@ -114,6 +69,21 @@
         "nullable": "YES"
       }
     },
+    "iqhold": {
+      "type": "Boolean",
+      "required": false,
+      "length": 250,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "iqhold",
+        "dataType": "character varying",
+        "dataLength": 250,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
     "iqholdat": {
       "type": "String",
       "required": false,
@@ -124,6 +94,21 @@
         "columnName": "iqholdat",
         "dataType": "timestamp without time zone",
         "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "iqcompleted": {
+      "type": "Boolean",
+      "required": false,
+      "length": 250,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "iqcompleted",
+        "dataType": "character varying",
+        "dataLength": 250,
         "dataPrecision": null,
         "dataScale": null,
         "nullable": "YES"
@@ -177,17 +162,21 @@
     "pdid": {
       "type": "String",
       "required": false,
-      "length": null,
+      "length": 250,
       "precision": null,
       "scale": null,
       "postgresql": {
         "columnName": "pdid",
         "dataType": "character varying",
-        "dataLength": null,
+        "dataLength": 250,
         "dataPrecision": null,
         "dataScale": null,
         "nullable": "YES"
       }
     }
-  }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
 }
