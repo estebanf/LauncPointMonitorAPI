@@ -70,7 +70,7 @@
       }
     },
     "iqhold": {
-      "type": "String",
+      "type": "Boolean",
       "required": false,
       "length": 250,
       "precision": null,
@@ -100,7 +100,7 @@
       }
     },
     "iqcompleted": {
-      "type": "String",
+      "type": "Boolean",
       "required": false,
       "length": 250,
       "precision": null,

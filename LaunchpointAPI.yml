@@ -1,0 +1,3896 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: LaunchPointMonitorAPI
+basePath: /api
+paths:
+  '/batchtrackings/{id}/casetrackings/{fk}':
+    get:
+      tags:
+        - batchtracking
+      summary: Find a related item by id for casetrackings.
+      operationId: batchtracking.prototype.__findById__casetrackings
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for casetrackings
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: batchtracking id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/casetracking'
+      deprecated: false
+    delete:
+      tags:
+        - batchtracking
+      summary: Delete a related item by id for casetrackings.
+      operationId: batchtracking.prototype.__destroyById__casetrackings
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for casetrackings
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: batchtracking id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - batchtracking
+      summary: Update a related item by id for casetrackings.
+      operationId: batchtracking.prototype.__updateById__casetrackings
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for casetrackings
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/casetracking'
+        - name: id
+          in: path
+          description: batchtracking id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/casetracking'
+      deprecated: false
+  '/batchtrackings/{id}/casetrackings':
+    get:
+      tags:
+        - batchtracking
+      summary: Queries casetrackings of batchtracking.
+      operationId: batchtracking.prototype.__get__casetrackings
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: batchtracking id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/casetracking'
+      deprecated: false
+    post:
+      tags:
+        - batchtracking
+      summary: Creates a new instance in casetrackings of this model.
+      operationId: batchtracking.prototype.__create__casetrackings
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/casetracking'
+        - name: id
+          in: path
+          description: batchtracking id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/casetracking'
+      deprecated: false
+    delete:
+      tags:
+        - batchtracking
+      summary: Deletes all casetrackings of this model.
+      operationId: batchtracking.prototype.__delete__casetrackings
+      parameters:
+        - name: id
+          in: path
+          description: batchtracking id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/batchtrackings/{id}/casetrackings/count':
+    get:
+      tags:
+        - batchtracking
+      summary: Counts casetrackings of batchtracking.
+      operationId: batchtracking.prototype.__count__casetrackings
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: batchtracking id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /batchtrackings:
+    post:
+      tags:
+        - batchtracking
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: batchtracking.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/batchtracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/batchtracking'
+      deprecated: false
+    patch:
+      tags:
+        - batchtracking
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: batchtracking.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/batchtracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/batchtracking'
+      deprecated: false
+    put:
+      tags:
+        - batchtracking
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: batchtracking.replaceOrCreate__put_batchtrackings
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/batchtracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/batchtracking'
+      deprecated: false
+    get:
+      tags:
+        - batchtracking
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: batchtracking.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/batchtracking'
+      deprecated: false
+  /batchtrackings/replaceOrCreate:
+    post:
+      tags:
+        - batchtracking
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: batchtracking.replaceOrCreate__post_batchtrackings_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/batchtracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/batchtracking'
+      deprecated: false
+  /batchtrackings/upsertWithWhere:
+    post:
+      tags:
+        - batchtracking
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: batchtracking.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/batchtracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/batchtracking'
+      deprecated: false
+  '/batchtrackings/{id}/exists':
+    get:
+      tags:
+        - batchtracking
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'batchtracking.exists__get_batchtrackings_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/batchtrackings/{id}':
+    head:
+      tags:
+        - batchtracking
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'batchtracking.exists__head_batchtrackings_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - batchtracking
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: batchtracking.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/batchtracking'
+      deprecated: false
+    put:
+      tags:
+        - batchtracking
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'batchtracking.replaceById__put_batchtrackings_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/batchtracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/batchtracking'
+      deprecated: false
+    delete:
+      tags:
+        - batchtracking
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: batchtracking.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - batchtracking
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: batchtracking.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/batchtracking'
+        - name: id
+          in: path
+          description: batchtracking id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/batchtracking'
+      deprecated: false
+  '/batchtrackings/{id}/replace':
+    post:
+      tags:
+        - batchtracking
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'batchtracking.replaceById__post_batchtrackings_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/batchtracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/batchtracking'
+      deprecated: false
+  /batchtrackings/findOne:
+    get:
+      tags:
+        - batchtracking
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: batchtracking.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/batchtracking'
+      deprecated: false
+  /batchtrackings/update:
+    post:
+      tags:
+        - batchtracking
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: batchtracking.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/batchtracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /batchtrackings/count:
+    get:
+      tags:
+        - batchtracking
+      summary: Count instances of the model matched by where from the data source.
+      operationId: batchtracking.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /batchtrackings/change-stream:
+    post:
+      tags:
+        - batchtracking
+      summary: Create a change stream.
+      operationId: batchtracking.createChangeStream__post_batchtrackings_change-stream
+      parameters:
+        - name: options
+          in: formData
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: file
+      deprecated: false
+    get:
+      tags:
+        - batchtracking
+      summary: Create a change stream.
+      operationId: batchtracking.createChangeStream__get_batchtrackings_change-stream
+      parameters:
+        - name: options
+          in: query
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: file
+      deprecated: false
+  '/isoresponsetrackings/{id}/isotracking':
+    get:
+      tags:
+        - isoresponsetracking
+      summary: Fetches belongsTo relation isotracking.
+      operationId: isoresponsetracking.prototype.__get__isotracking
+      parameters:
+        - name: refresh
+          in: query
+          required: false
+          type: boolean
+        - name: id
+          in: path
+          description: isoresponsetracking id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/isotracking'
+      deprecated: false
+  /isoresponsetrackings:
+    post:
+      tags:
+        - isoresponsetracking
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: isoresponsetracking.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/isoresponsetracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/isoresponsetracking'
+      deprecated: false
+    patch:
+      tags:
+        - isoresponsetracking
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: isoresponsetracking.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/isoresponsetracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/isoresponsetracking'
+      deprecated: false
+    put:
+      tags:
+        - isoresponsetracking
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: isoresponsetracking.replaceOrCreate__put_isoresponsetrackings
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/isoresponsetracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/isoresponsetracking'
+      deprecated: false
+    get:
+      tags:
+        - isoresponsetracking
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: isoresponsetracking.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/isoresponsetracking'
+      deprecated: false
+  /isoresponsetrackings/replaceOrCreate:
+    post:
+      tags:
+        - isoresponsetracking
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: >-
+        isoresponsetracking.replaceOrCreate__post_isoresponsetrackings_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/isoresponsetracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/isoresponsetracking'
+      deprecated: false
+  /isoresponsetrackings/upsertWithWhere:
+    post:
+      tags:
+        - isoresponsetracking
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: isoresponsetracking.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/isoresponsetracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/isoresponsetracking'
+      deprecated: false
+  '/isoresponsetrackings/{id}/exists':
+    get:
+      tags:
+        - isoresponsetracking
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'isoresponsetracking.exists__get_isoresponsetrackings_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/isoresponsetrackings/{id}':
+    head:
+      tags:
+        - isoresponsetracking
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'isoresponsetracking.exists__head_isoresponsetrackings_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - isoresponsetracking
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: isoresponsetracking.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/isoresponsetracking'
+      deprecated: false
+    put:
+      tags:
+        - isoresponsetracking
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'isoresponsetracking.replaceById__put_isoresponsetrackings_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/isoresponsetracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/isoresponsetracking'
+      deprecated: false
+    delete:
+      tags:
+        - isoresponsetracking
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: isoresponsetracking.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - isoresponsetracking
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: isoresponsetracking.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/isoresponsetracking'
+        - name: id
+          in: path
+          description: isoresponsetracking id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/isoresponsetracking'
+      deprecated: false
+  '/isoresponsetrackings/{id}/replace':
+    post:
+      tags:
+        - isoresponsetracking
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'isoresponsetracking.replaceById__post_isoresponsetrackings_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/isoresponsetracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/isoresponsetracking'
+      deprecated: false
+  /isoresponsetrackings/findOne:
+    get:
+      tags:
+        - isoresponsetracking
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: isoresponsetracking.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/isoresponsetracking'
+      deprecated: false
+  /isoresponsetrackings/update:
+    post:
+      tags:
+        - isoresponsetracking
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: isoresponsetracking.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/isoresponsetracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /isoresponsetrackings/count:
+    get:
+      tags:
+        - isoresponsetracking
+      summary: Count instances of the model matched by where from the data source.
+      operationId: isoresponsetracking.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /isoresponsetrackings/change-stream:
+    post:
+      tags:
+        - isoresponsetracking
+      summary: Create a change stream.
+      operationId: >-
+        isoresponsetracking.createChangeStream__post_isoresponsetrackings_change-stream
+      parameters:
+        - name: options
+          in: formData
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: file
+      deprecated: false
+    get:
+      tags:
+        - isoresponsetracking
+      summary: Create a change stream.
+      operationId: >-
+        isoresponsetracking.createChangeStream__get_isoresponsetrackings_change-stream
+      parameters:
+        - name: options
+          in: query
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: file
+      deprecated: false
+  '/casetrackings/{id}/batchtracking':
+    get:
+      tags:
+        - casetracking
+      summary: Fetches belongsTo relation batchtracking.
+      operationId: casetracking.prototype.__get__batchtracking
+      parameters:
+        - name: refresh
+          in: query
+          required: false
+          type: boolean
+        - name: id
+          in: path
+          description: casetracking id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/batchtracking'
+      deprecated: false
+  '/casetrackings/{id}/isotrackings/{fk}':
+    get:
+      tags:
+        - casetracking
+      summary: Find a related item by id for isotrackings.
+      operationId: casetracking.prototype.__findById__isotrackings
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for isotrackings
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: casetracking id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/isotracking'
+      deprecated: false
+    delete:
+      tags:
+        - casetracking
+      summary: Delete a related item by id for isotrackings.
+      operationId: casetracking.prototype.__destroyById__isotrackings
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for isotrackings
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: casetracking id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - casetracking
+      summary: Update a related item by id for isotrackings.
+      operationId: casetracking.prototype.__updateById__isotrackings
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for isotrackings
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/isotracking'
+        - name: id
+          in: path
+          description: casetracking id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/isotracking'
+      deprecated: false
+  '/casetrackings/{id}/isotrackings':
+    get:
+      tags:
+        - casetracking
+      summary: Queries isotrackings of casetracking.
+      operationId: casetracking.prototype.__get__isotrackings
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: casetracking id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/isotracking'
+      deprecated: false
+    post:
+      tags:
+        - casetracking
+      summary: Creates a new instance in isotrackings of this model.
+      operationId: casetracking.prototype.__create__isotrackings
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/isotracking'
+        - name: id
+          in: path
+          description: casetracking id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/isotracking'
+      deprecated: false
+    delete:
+      tags:
+        - casetracking
+      summary: Deletes all isotrackings of this model.
+      operationId: casetracking.prototype.__delete__isotrackings
+      parameters:
+        - name: id
+          in: path
+          description: casetracking id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/casetrackings/{id}/isotrackings/count':
+    get:
+      tags:
+        - casetracking
+      summary: Counts isotrackings of casetracking.
+      operationId: casetracking.prototype.__count__isotrackings
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: casetracking id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /casetrackings:
+    post:
+      tags:
+        - casetracking
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: casetracking.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/casetracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/casetracking'
+      deprecated: false
+    patch:
+      tags:
+        - casetracking
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: casetracking.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/casetracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/casetracking'
+      deprecated: false
+    put:
+      tags:
+        - casetracking
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: casetracking.replaceOrCreate__put_casetrackings
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/casetracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/casetracking'
+      deprecated: false
+    get:
+      tags:
+        - casetracking
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: casetracking.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/casetracking'
+      deprecated: false
+  /casetrackings/replaceOrCreate:
+    post:
+      tags:
+        - casetracking
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: casetracking.replaceOrCreate__post_casetrackings_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/casetracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/casetracking'
+      deprecated: false
+  /casetrackings/upsertWithWhere:
+    post:
+      tags:
+        - casetracking
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: casetracking.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/casetracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/casetracking'
+      deprecated: false
+  '/casetrackings/{id}/exists':
+    get:
+      tags:
+        - casetracking
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'casetracking.exists__get_casetrackings_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/casetrackings/{id}':
+    head:
+      tags:
+        - casetracking
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'casetracking.exists__head_casetrackings_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - casetracking
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: casetracking.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/casetracking'
+      deprecated: false
+    put:
+      tags:
+        - casetracking
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'casetracking.replaceById__put_casetrackings_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/casetracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/casetracking'
+      deprecated: false
+    delete:
+      tags:
+        - casetracking
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: casetracking.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - casetracking
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: casetracking.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/casetracking'
+        - name: id
+          in: path
+          description: casetracking id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/casetracking'
+      deprecated: false
+  '/casetrackings/{id}/replace':
+    post:
+      tags:
+        - casetracking
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'casetracking.replaceById__post_casetrackings_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/casetracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/casetracking'
+      deprecated: false
+  /casetrackings/findOne:
+    get:
+      tags:
+        - casetracking
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: casetracking.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/casetracking'
+      deprecated: false
+  /casetrackings/update:
+    post:
+      tags:
+        - casetracking
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: casetracking.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/casetracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /casetrackings/count:
+    get:
+      tags:
+        - casetracking
+      summary: Count instances of the model matched by where from the data source.
+      operationId: casetracking.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /casetrackings/change-stream:
+    post:
+      tags:
+        - casetracking
+      summary: Create a change stream.
+      operationId: casetracking.createChangeStream__post_casetrackings_change-stream
+      parameters:
+        - name: options
+          in: formData
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: file
+      deprecated: false
+    get:
+      tags:
+        - casetracking
+      summary: Create a change stream.
+      operationId: casetracking.createChangeStream__get_casetrackings_change-stream
+      parameters:
+        - name: options
+          in: query
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: file
+      deprecated: false
+  /iqtrackings:
+    post:
+      tags:
+        - iqtracking
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: iqtracking.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/iqtracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/iqtracking'
+      deprecated: false
+    patch:
+      tags:
+        - iqtracking
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: iqtracking.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/iqtracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/iqtracking'
+      deprecated: false
+    put:
+      tags:
+        - iqtracking
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: iqtracking.replaceOrCreate__put_iqtrackings
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/iqtracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/iqtracking'
+      deprecated: false
+    get:
+      tags:
+        - iqtracking
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: iqtracking.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/iqtracking'
+      deprecated: false
+  /iqtrackings/replaceOrCreate:
+    post:
+      tags:
+        - iqtracking
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: iqtracking.replaceOrCreate__post_iqtrackings_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/iqtracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/iqtracking'
+      deprecated: false
+  /iqtrackings/upsertWithWhere:
+    post:
+      tags:
+        - iqtracking
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: iqtracking.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/iqtracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/iqtracking'
+      deprecated: false
+  '/iqtrackings/{id}/exists':
+    get:
+      tags:
+        - iqtracking
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'iqtracking.exists__get_iqtrackings_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/iqtrackings/{id}':
+    head:
+      tags:
+        - iqtracking
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'iqtracking.exists__head_iqtrackings_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - iqtracking
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: iqtracking.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/iqtracking'
+      deprecated: false
+    put:
+      tags:
+        - iqtracking
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'iqtracking.replaceById__put_iqtrackings_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/iqtracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/iqtracking'
+      deprecated: false
+    delete:
+      tags:
+        - iqtracking
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: iqtracking.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - iqtracking
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: iqtracking.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/iqtracking'
+        - name: id
+          in: path
+          description: iqtracking id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/iqtracking'
+      deprecated: false
+  '/iqtrackings/{id}/replace':
+    post:
+      tags:
+        - iqtracking
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'iqtracking.replaceById__post_iqtrackings_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/iqtracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/iqtracking'
+      deprecated: false
+  /iqtrackings/findOne:
+    get:
+      tags:
+        - iqtracking
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: iqtracking.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/iqtracking'
+      deprecated: false
+  /iqtrackings/update:
+    post:
+      tags:
+        - iqtracking
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: iqtracking.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/iqtracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /iqtrackings/count:
+    get:
+      tags:
+        - iqtracking
+      summary: Count instances of the model matched by where from the data source.
+      operationId: iqtracking.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /iqtrackings/change-stream:
+    post:
+      tags:
+        - iqtracking
+      summary: Create a change stream.
+      operationId: iqtracking.createChangeStream__post_iqtrackings_change-stream
+      parameters:
+        - name: options
+          in: formData
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: file
+      deprecated: false
+    get:
+      tags:
+        - iqtracking
+      summary: Create a change stream.
+      operationId: iqtracking.createChangeStream__get_iqtrackings_change-stream
+      parameters:
+        - name: options
+          in: query
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: file
+      deprecated: false
+  /iqlettertrackings:
+    post:
+      tags:
+        - iqlettertracking
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: iqlettertracking.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/iqlettertracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/iqlettertracking'
+      deprecated: false
+    patch:
+      tags:
+        - iqlettertracking
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: iqlettertracking.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/iqlettertracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/iqlettertracking'
+      deprecated: false
+    put:
+      tags:
+        - iqlettertracking
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: iqlettertracking.replaceOrCreate__put_iqlettertrackings
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/iqlettertracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/iqlettertracking'
+      deprecated: false
+    get:
+      tags:
+        - iqlettertracking
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: iqlettertracking.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/iqlettertracking'
+      deprecated: false
+  /iqlettertrackings/replaceOrCreate:
+    post:
+      tags:
+        - iqlettertracking
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: iqlettertracking.replaceOrCreate__post_iqlettertrackings_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/iqlettertracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/iqlettertracking'
+      deprecated: false
+  /iqlettertrackings/upsertWithWhere:
+    post:
+      tags:
+        - iqlettertracking
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: iqlettertracking.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/iqlettertracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/iqlettertracking'
+      deprecated: false
+  '/iqlettertrackings/{id}/exists':
+    get:
+      tags:
+        - iqlettertracking
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'iqlettertracking.exists__get_iqlettertrackings_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/iqlettertrackings/{id}':
+    head:
+      tags:
+        - iqlettertracking
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'iqlettertracking.exists__head_iqlettertrackings_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - iqlettertracking
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: iqlettertracking.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/iqlettertracking'
+      deprecated: false
+    put:
+      tags:
+        - iqlettertracking
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'iqlettertracking.replaceById__put_iqlettertrackings_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/iqlettertracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/iqlettertracking'
+      deprecated: false
+    delete:
+      tags:
+        - iqlettertracking
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: iqlettertracking.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - iqlettertracking
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: iqlettertracking.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/iqlettertracking'
+        - name: id
+          in: path
+          description: iqlettertracking id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/iqlettertracking'
+      deprecated: false
+  '/iqlettertrackings/{id}/replace':
+    post:
+      tags:
+        - iqlettertracking
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'iqlettertracking.replaceById__post_iqlettertrackings_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/iqlettertracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/iqlettertracking'
+      deprecated: false
+  /iqlettertrackings/findOne:
+    get:
+      tags:
+        - iqlettertracking
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: iqlettertracking.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/iqlettertracking'
+      deprecated: false
+  /iqlettertrackings/update:
+    post:
+      tags:
+        - iqlettertracking
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: iqlettertracking.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/iqlettertracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /iqlettertrackings/count:
+    get:
+      tags:
+        - iqlettertracking
+      summary: Count instances of the model matched by where from the data source.
+      operationId: iqlettertracking.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /iqlettertrackings/change-stream:
+    post:
+      tags:
+        - iqlettertracking
+      summary: Create a change stream.
+      operationId: >-
+        iqlettertracking.createChangeStream__post_iqlettertrackings_change-stream
+      parameters:
+        - name: options
+          in: formData
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: file
+      deprecated: false
+    get:
+      tags:
+        - iqlettertracking
+      summary: Create a change stream.
+      operationId: iqlettertracking.createChangeStream__get_iqlettertrackings_change-stream
+      parameters:
+        - name: options
+          in: query
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: file
+      deprecated: false
+  '/isotrackings/{id}/casetracking':
+    get:
+      tags:
+        - isotracking
+      summary: Fetches belongsTo relation casetracking.
+      operationId: isotracking.prototype.__get__casetracking
+      parameters:
+        - name: refresh
+          in: query
+          required: false
+          type: boolean
+        - name: id
+          in: path
+          description: isotracking id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/casetracking'
+      deprecated: false
+  '/isotrackings/{id}/isoresponsetrackings/{fk}':
+    get:
+      tags:
+        - isotracking
+      summary: Find a related item by id for isoresponsetrackings.
+      operationId: isotracking.prototype.__findById__isoresponsetrackings
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for isoresponsetrackings
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: isotracking id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/isoresponsetracking'
+      deprecated: false
+    delete:
+      tags:
+        - isotracking
+      summary: Delete a related item by id for isoresponsetrackings.
+      operationId: isotracking.prototype.__destroyById__isoresponsetrackings
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for isoresponsetrackings
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: isotracking id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - isotracking
+      summary: Update a related item by id for isoresponsetrackings.
+      operationId: isotracking.prototype.__updateById__isoresponsetrackings
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for isoresponsetrackings
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/isoresponsetracking'
+        - name: id
+          in: path
+          description: isotracking id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/isoresponsetracking'
+      deprecated: false
+  '/isotrackings/{id}/isoresponsetrackings':
+    get:
+      tags:
+        - isotracking
+      summary: Queries isoresponsetrackings of isotracking.
+      operationId: isotracking.prototype.__get__isoresponsetrackings
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: isotracking id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/isoresponsetracking'
+      deprecated: false
+    post:
+      tags:
+        - isotracking
+      summary: Creates a new instance in isoresponsetrackings of this model.
+      operationId: isotracking.prototype.__create__isoresponsetrackings
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/isoresponsetracking'
+        - name: id
+          in: path
+          description: isotracking id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/isoresponsetracking'
+      deprecated: false
+    delete:
+      tags:
+        - isotracking
+      summary: Deletes all isoresponsetrackings of this model.
+      operationId: isotracking.prototype.__delete__isoresponsetrackings
+      parameters:
+        - name: id
+          in: path
+          description: isotracking id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/isotrackings/{id}/isoresponsetrackings/count':
+    get:
+      tags:
+        - isotracking
+      summary: Counts isoresponsetrackings of isotracking.
+      operationId: isotracking.prototype.__count__isoresponsetrackings
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: isotracking id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /isotrackings:
+    post:
+      tags:
+        - isotracking
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: isotracking.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/isotracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/isotracking'
+      deprecated: false
+    patch:
+      tags:
+        - isotracking
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: isotracking.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/isotracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/isotracking'
+      deprecated: false
+    put:
+      tags:
+        - isotracking
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: isotracking.replaceOrCreate__put_isotrackings
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/isotracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/isotracking'
+      deprecated: false
+    get:
+      tags:
+        - isotracking
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: isotracking.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/isotracking'
+      deprecated: false
+  /isotrackings/replaceOrCreate:
+    post:
+      tags:
+        - isotracking
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: isotracking.replaceOrCreate__post_isotrackings_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/isotracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/isotracking'
+      deprecated: false
+  /isotrackings/upsertWithWhere:
+    post:
+      tags:
+        - isotracking
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: isotracking.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/isotracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/isotracking'
+      deprecated: false
+  '/isotrackings/{id}/exists':
+    get:
+      tags:
+        - isotracking
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'isotracking.exists__get_isotrackings_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/isotrackings/{id}':
+    head:
+      tags:
+        - isotracking
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'isotracking.exists__head_isotrackings_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - isotracking
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: isotracking.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/isotracking'
+      deprecated: false
+    put:
+      tags:
+        - isotracking
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'isotracking.replaceById__put_isotrackings_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/isotracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/isotracking'
+      deprecated: false
+    delete:
+      tags:
+        - isotracking
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: isotracking.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - isotracking
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: isotracking.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/isotracking'
+        - name: id
+          in: path
+          description: isotracking id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/isotracking'
+      deprecated: false
+  '/isotrackings/{id}/replace':
+    post:
+      tags:
+        - isotracking
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'isotracking.replaceById__post_isotrackings_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/isotracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/isotracking'
+      deprecated: false
+  /isotrackings/findOne:
+    get:
+      tags:
+        - isotracking
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: isotracking.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/isotracking'
+      deprecated: false
+  /isotrackings/update:
+    post:
+      tags:
+        - isotracking
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: isotracking.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/isotracking'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /isotrackings/count:
+    get:
+      tags:
+        - isotracking
+      summary: Count instances of the model matched by where from the data source.
+      operationId: isotracking.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /isotrackings/change-stream:
+    post:
+      tags:
+        - isotracking
+      summary: Create a change stream.
+      operationId: isotracking.createChangeStream__post_isotrackings_change-stream
+      parameters:
+        - name: options
+          in: formData
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: file
+      deprecated: false
+    get:
+      tags:
+        - isotracking
+      summary: Create a change stream.
+      operationId: isotracking.createChangeStream__get_isotrackings_change-stream
+      parameters:
+        - name: options
+          in: query
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: file
+      deprecated: false
+  /ISOCases:
+    post:
+      tags:
+        - ISOCases
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: ISOCases.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/ISOCases'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/ISOCases'
+      deprecated: false
+    patch:
+      tags:
+        - ISOCases
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: ISOCases.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/ISOCases'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/ISOCases'
+      deprecated: false
+    put:
+      tags:
+        - ISOCases
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: ISOCases.replaceOrCreate__put_ISOCases
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/ISOCases'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/ISOCases'
+      deprecated: false
+    get:
+      tags:
+        - ISOCases
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: ISOCases.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ISOCases'
+      deprecated: false
+  /ISOCases/replaceOrCreate:
+    post:
+      tags:
+        - ISOCases
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: ISOCases.replaceOrCreate__post_ISOCases_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/ISOCases'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/ISOCases'
+      deprecated: false
+  /ISOCases/upsertWithWhere:
+    post:
+      tags:
+        - ISOCases
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: ISOCases.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/ISOCases'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/ISOCases'
+      deprecated: false
+  '/ISOCases/{id}/exists':
+    get:
+      tags:
+        - ISOCases
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'ISOCases.exists__get_ISOCases_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/ISOCases/{id}':
+    head:
+      tags:
+        - ISOCases
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'ISOCases.exists__head_ISOCases_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - ISOCases
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: ISOCases.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/ISOCases'
+      deprecated: false
+    put:
+      tags:
+        - ISOCases
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'ISOCases.replaceById__put_ISOCases_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/ISOCases'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/ISOCases'
+      deprecated: false
+    delete:
+      tags:
+        - ISOCases
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: ISOCases.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - ISOCases
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: ISOCases.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/ISOCases'
+        - name: id
+          in: path
+          description: ISOCases id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/ISOCases'
+      deprecated: false
+  '/ISOCases/{id}/replace':
+    post:
+      tags:
+        - ISOCases
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'ISOCases.replaceById__post_ISOCases_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/ISOCases'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/ISOCases'
+      deprecated: false
+  /ISOCases/findOne:
+    get:
+      tags:
+        - ISOCases
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: ISOCases.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/ISOCases'
+      deprecated: false
+  /ISOCases/update:
+    post:
+      tags:
+        - ISOCases
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: ISOCases.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/ISOCases'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /ISOCases/count:
+    get:
+      tags:
+        - ISOCases
+      summary: Count instances of the model matched by where from the data source.
+      operationId: ISOCases.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /ISOCases/change-stream:
+    post:
+      tags:
+        - ISOCases
+      summary: Create a change stream.
+      operationId: ISOCases.createChangeStream__post_ISOCases_change-stream
+      parameters:
+        - name: options
+          in: formData
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: file
+      deprecated: false
+    get:
+      tags:
+        - ISOCases
+      summary: Create a change stream.
+      operationId: ISOCases.createChangeStream__get_ISOCases_change-stream
+      parameters:
+        - name: options
+          in: query
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: file
+      deprecated: false
+tags:
+  - name: batchtracking
+  - name: isoresponsetracking
+  - name: casetracking
+  - name: iqtracking
+  - name: iqlettertracking
+  - name: isotracking
+  - name: ISOCases
+consumes:
+  - application/json
+  - application/x-www-form-urlencoded
+  - application/xml
+  - text/xml
+produces:
+  - application/json
+  - application/xml
+  - text/xml
+  - application/javascript
+  - text/javascript
+definitions:
+  x-any:
+    properties: {}
+  casetracking:
+    properties:
+      casetrackingid:
+        maxLength: 250
+        type: string
+      caseid:
+        type: number
+        format: double
+      isoindicator:
+        type: number
+        format: double
+      score:
+        type: number
+        format: double
+      accidentdate:
+        type: string
+      benefitamount:
+        type: number
+        format: double
+      fundingsource:
+        maxLength: 250
+        type: string
+      lob:
+        maxLength: 250
+        type: string
+      state:
+        maxLength: 250
+        type: string
+      workcomp:
+        maxLength: 250
+        type: string
+      casestatus:
+        maxLength: 250
+        type: string
+      casesource:
+        maxLength: 250
+        type: string
+      casetype:
+        maxLength: 250
+        type: string
+      batchid:
+        type: number
+        format: double
+      casereceived:
+        type: boolean
+      caseidentified:
+        type: boolean
+      casereceivedat:
+        type: string
+      caseidentifiedat:
+        type: string
+      pid:
+        type: number
+        format: double
+      pdid:
+        maxLength: 250
+        type: string
+      createdat:
+        type: string
+      modifiedat:
+        type: string
+    required:
+      - casetrackingid
+    additionalProperties: false
+  batchtracking:
+    properties:
+      batchid:
+        type: number
+        format: double
+      environmentid:
+        maxLength: 250
+        type: string
+      clientid:
+        type: number
+        format: double
+      casecount:
+        type: number
+        format: double
+      batchprocessingbegan:
+        type: boolean
+      batchprocessingended:
+        type: boolean
+      batchprocessingbeganat:
+        type: string
+      batchprocessingendedat:
+        type: string
+      createdat:
+        type: string
+      modifiedat:
+        type: string
+      pid:
+        type: number
+        format: double
+      pdid:
+        maxLength: 250
+        type: string
+    required:
+      - batchid
+    additionalProperties: false
+  isotracking:
+    properties:
+      pid:
+        type: number
+        format: double
+      caseid:
+        type: number
+        format: double
+      batchid:
+        type: number
+        format: double
+      clientid:
+        type: number
+        format: double
+      environmentid:
+        maxLength: 250
+        type: string
+      requestid:
+        maxLength: 250
+        type: string
+      isoreceived:
+        type: boolean
+      isoprocessingbegan:
+        type: boolean
+      isoduplicatefound:
+        type: boolean
+      isodatafetched:
+        type: boolean
+      isosent:
+        type: boolean
+      isoreceivedat:
+        type: string
+      isoprocessingbeganat:
+        type: string
+      isoduplicatefoundat:
+        type: string
+      isodatafetchedat:
+        type: string
+      isosentat:
+        type: string
+      parentpid:
+        maxLength: 250
+        type: string
+      pdid:
+        maxLength: 250
+        type: string
+      createdat:
+        type: string
+      modifiedat:
+        type: string
+    required:
+      - pid
+    additionalProperties: false
+  isoresponsetracking:
+    properties:
+      pid:
+        type: number
+        format: double
+      requestid:
+        maxLength: 250
+        type: number
+        format: double
+      caseid:
+        type: number
+        format: double
+      score:
+        maxLength: 250
+        type: string
+      isoresponsereceived:
+        type: boolean
+      previousscoreretrieved:
+        type: boolean
+      isoresponsesent:
+        type: boolean
+      scorereceived:
+        type: boolean
+      diarycreated:
+        type: boolean
+      activitycreated:
+        type: boolean
+      iqcancelled:
+        type: boolean
+      isocancelled:
+        type: boolean
+      caseclosed:
+        type: boolean
+      exceptioncreated:
+        type: boolean
+      casereopened:
+        type: boolean
+      iqsent:
+        type: boolean
+      isoresponsereceivedat:
+        type: string
+      previousscoreretrievedat:
+        type: string
+      isoresponsesentat:
+        type: string
+      scorereceivedat:
+        type: string
+      diarycreatedat:
+        type: string
+      activitycreatedat:
+        type: string
+      iqcancelledat:
+        type: string
+      isocancelledat:
+        type: string
+      caseclosedat:
+        type: string
+      exceptioncreatedat:
+        type: string
+      casereopenedat:
+        type: string
+      iqsentat:
+        type: string
+      pdid:
+        maxLength: 250
+        type: string
+      createdat:
+        type: string
+      updatedat:
+        type: string
+    required:
+      - pid
+    additionalProperties: false
+  iqtracking:
+    properties:
+      pid:
+        type: number
+        format: double
+      caseid:
+        type: number
+        format: double
+      iqreceived:
+        type: boolean
+      iqreceivedat:
+        type: string
+      iqhold:
+        maxLength: 250
+        type: string
+      iqholdat:
+        type: string
+      iqcompleted:
+        maxLength: 250
+        type: string
+      iqcompletedat:
+        type: string
+      createdat:
+        type: string
+      modifiedat:
+        type: string
+      pdid:
+        maxLength: 250
+        type: string
+    required:
+      - pid
+    additionalProperties: false
+  iqlettertracking:
+    properties:
+      iqlettertrackingid:
+        maxLength: 250
+        type: string
+      pid:
+        type: number
+        format: double
+      letternumber:
+        type: number
+        format: double
+      caseid:
+        maxLength: 250
+        type: string
+      iqenqueued:
+        type: boolean
+      iqenqueuedat:
+        maxLength: 250
+        type: string
+      iqsent:
+        type: boolean
+      iqsentat:
+        maxLength: 250
+        type: string
+      iqresponsereceived:
+        type: boolean
+      iqresponsereceivedat:
+        maxLength: 250
+        type: string
+      iqresponse:
+        maxLength: 250
+        type: string
+      ppid:
+        maxLength: 250
+        type: string
+      createdat:
+        type: string
+      modifiedat:
+        type: string
+    required:
+      - iqlettertrackingid
+    additionalProperties: false
+  ISOCases:
+    properties:
+      batchid:
+        type: number
+        format: double
+      parentpid:
+        type: number
+        format: double
+      isopid:
+        type: number
+        format: double
+      caseid:
+        type: number
+        format: double
+      isoindicator:
+        type: number
+        format: double
+      score:
+        type: number
+        format: double
+      accidentdate:
+        type: string
+      benefitamount:
+        type: number
+        format: double
+      fundingsource:
+        maxLength: 250
+        type: string
+      lob:
+        maxLength: 250
+        type: string
+      state:
+        maxLength: 250
+        type: string
+      workcomp:
+        maxLength: 250
+        type: string
+      casestatus:
+        maxLength: 250
+        type: string
+      casesource:
+        maxLength: 250
+        type: string
+      casetype:
+        maxLength: 250
+        type: string
+      casereceived:
+        type: boolean
+      caseidentified:
+        type: boolean
+      casereceivedat:
+        type: string
+      caseidentifiedat:
+        type: string
+      requestid:
+        maxLength: 250
+        type: string
+      isoreceived:
+        type: boolean
+      isoreceivedat:
+        type: string
+      isoprocessingbegan:
+        type: boolean
+      isoprocessingbeganat:
+        type: string
+      isoduplicatefound:
+        type: boolean
+      isoduplicatefoundat:
+        type: string
+      isodatafetched:
+        type: boolean
+      isodatafetchedat:
+        type: string
+      isosent:
+        type: boolean
+      isosentat:
+        type: string
+      id:
+        type: number
+        format: double
+    additionalProperties: false
