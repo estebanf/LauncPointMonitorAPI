@@ -1,10 +1,10 @@
 {
-  "name": "isoresponsetracking",
+  "name": "isotracking",
   "options": {
     "idInjection": false,
     "postgresql": {
       "schema": "public",
-      "table": "isoresponsetracking"
+      "table": "isotracking"
     }
   },
   "properties": {
@@ -24,21 +24,6 @@
         "nullable": "NO"
       }
     },
-    "requestid": {
-      "type": "String",
-      "required": false,
-      "length": 250,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "requestid",
-        "dataType": "character varying",
-        "dataLength": 250,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
     "caseid": {
       "type": "Number",
       "required": false,
@@ -54,14 +39,44 @@
         "nullable": "YES"
       }
     },
-    "score": {
+    "batchid": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 32,
+      "scale": 0,
+      "postgresql": {
+        "columnName": "batchid",
+        "dataType": "integer",
+        "dataLength": null,
+        "dataPrecision": 32,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "clientid": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 32,
+      "scale": 0,
+      "postgresql": {
+        "columnName": "clientid",
+        "dataType": "integer",
+        "dataLength": null,
+        "dataPrecision": 32,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "environmentid": {
       "type": "String",
       "required": false,
       "length": 250,
       "precision": null,
       "scale": null,
       "postgresql": {
-        "columnName": "score",
+        "columnName": "environmentid",
         "dataType": "character varying",
         "dataLength": 250,
         "dataPrecision": null,
@@ -69,14 +84,29 @@
         "nullable": "YES"
       }
     },
-    "isoresponsereceived": {
+    "requestid": {
+      "type": "String",
+      "required": false,
+      "length": 250,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "requestid",
+        "dataType": "character varying",
+        "dataLength": 250,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "isoreceived": {
       "type": "Boolean",
       "required": false,
       "length": null,
       "precision": null,
       "scale": null,
       "postgresql": {
-        "columnName": "isoresponsereceived",
+        "columnName": "isoreceived",
         "dataType": "boolean",
         "dataLength": null,
         "dataPrecision": null,
@@ -84,14 +114,14 @@
         "nullable": "YES"
       }
     },
-    "previousscoreretrieved": {
+    "isoprocessingbegan": {
       "type": "Boolean",
       "required": false,
       "length": null,
       "precision": null,
       "scale": null,
       "postgresql": {
-        "columnName": "previousscoreretrieved",
+        "columnName": "isoprocessingbegan",
         "dataType": "boolean",
         "dataLength": null,
         "dataPrecision": null,
@@ -99,14 +129,14 @@
         "nullable": "YES"
       }
     },
-    "isoresponsesent": {
+    "isoduplicatefound": {
       "type": "Boolean",
       "required": false,
       "length": null,
       "precision": null,
       "scale": null,
       "postgresql": {
-        "columnName": "isoresponsesent",
+        "columnName": "isoduplicatefound",
         "dataType": "boolean",
         "dataLength": null,
         "dataPrecision": null,
@@ -114,14 +144,14 @@
         "nullable": "YES"
       }
     },
-    "scorereceived": {
+    "isodatafetched": {
       "type": "Boolean",
       "required": false,
       "length": null,
       "precision": null,
       "scale": null,
       "postgresql": {
-        "columnName": "scorereceived",
+        "columnName": "isodatafetched",
         "dataType": "boolean",
         "dataLength": null,
         "dataPrecision": null,
@@ -129,14 +159,14 @@
         "nullable": "YES"
       }
     },
-    "diarycreated": {
+    "isosent": {
       "type": "Boolean",
       "required": false,
       "length": null,
       "precision": null,
       "scale": null,
       "postgresql": {
-        "columnName": "diarycreated",
+        "columnName": "isosent",
         "dataType": "boolean",
         "dataLength": null,
         "dataPrecision": null,
@@ -144,119 +174,14 @@
         "nullable": "YES"
       }
     },
-    "activitycreated": {
-      "type": "Boolean",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "activitycreated",
-        "dataType": "boolean",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "iqcancelled": {
-      "type": "Boolean",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "iqcancelled",
-        "dataType": "boolean",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "isocancelled": {
-      "type": "Boolean",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "isocancelled",
-        "dataType": "boolean",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "caseclosed": {
-      "type": "Boolean",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "caseclosed",
-        "dataType": "boolean",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "exceptioncreated": {
-      "type": "Boolean",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "exceptioncreated",
-        "dataType": "boolean",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "casereopened": {
-      "type": "Boolean",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "casereopened",
-        "dataType": "boolean",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "iqsent": {
-      "type": "Boolean",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "iqsent",
-        "dataType": "boolean",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "isoresponsereceivedat": {
+    "isoreceivedat": {
       "type": "String",
       "required": false,
       "length": null,
       "precision": null,
       "scale": null,
       "postgresql": {
-        "columnName": "isoresponsereceivedat",
+        "columnName": "isoreceivedat",
         "dataType": "timestamp without time zone",
         "dataLength": null,
         "dataPrecision": null,
@@ -264,14 +189,14 @@
         "nullable": "YES"
       }
     },
-    "previousscoreretrievedat": {
+    "isoprocessingbeganat": {
       "type": "String",
       "required": false,
       "length": null,
       "precision": null,
       "scale": null,
       "postgresql": {
-        "columnName": "previousscoreretrievedat",
+        "columnName": "isoprocessingbeganat",
         "dataType": "timestamp without time zone",
         "dataLength": null,
         "dataPrecision": null,
@@ -279,14 +204,14 @@
         "nullable": "YES"
       }
     },
-    "isoresponsesentat": {
+    "isoduplicatefoundat": {
       "type": "String",
       "required": false,
       "length": null,
       "precision": null,
       "scale": null,
       "postgresql": {
-        "columnName": "isoresponsesentat",
+        "columnName": "isoduplicatefoundat",
         "dataType": "timestamp without time zone",
         "dataLength": null,
         "dataPrecision": null,
@@ -294,14 +219,14 @@
         "nullable": "YES"
       }
     },
-    "scorereceivedat": {
+    "isodatafetchedat": {
       "type": "String",
       "required": false,
       "length": null,
       "precision": null,
       "scale": null,
       "postgresql": {
-        "columnName": "scorereceivedat",
+        "columnName": "isodatafetchedat",
         "dataType": "timestamp without time zone",
         "dataLength": null,
         "dataPrecision": null,
@@ -309,14 +234,14 @@
         "nullable": "YES"
       }
     },
-    "diarycreatedat": {
+    "isosentat": {
       "type": "String",
       "required": false,
       "length": null,
       "precision": null,
       "scale": null,
       "postgresql": {
-        "columnName": "diarycreatedat",
+        "columnName": "isosentat",
         "dataType": "timestamp without time zone",
         "dataLength": null,
         "dataPrecision": null,
@@ -324,106 +249,16 @@
         "nullable": "YES"
       }
     },
-    "activitycreatedat": {
+    "parentpid": {
       "type": "String",
       "required": false,
-      "length": null,
+      "length": 250,
       "precision": null,
       "scale": null,
       "postgresql": {
-        "columnName": "activitycreatedat",
-        "dataType": "timestamp without time zone",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "iqcancelledat": {
-      "type": "String",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "iqcancelledat",
-        "dataType": "timestamp without time zone",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "isocancelledat": {
-      "type": "String",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "isocancelledat",
-        "dataType": "timestamp without time zone",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "caseclosedat": {
-      "type": "String",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "caseclosedat",
-        "dataType": "timestamp without time zone",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "exceptioncreatedat": {
-      "type": "String",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "exceptioncreatedat",
-        "dataType": "timestamp without time zone",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "casereopenedat": {
-      "type": "String",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "casereopenedat",
-        "dataType": "timestamp without time zone",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "iqsentat": {
-      "type": "String",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "iqsentat",
-        "dataType": "timestamp without time zone",
-        "dataLength": null,
+        "columnName": "parentpid",
+        "dataType": "character varying",
+        "dataLength": 250,
         "dataPrecision": null,
         "dataScale": null,
         "nullable": "YES"
@@ -459,14 +294,14 @@
         "nullable": "YES"
       }
     },
-    "updatedat": {
+    "modifiedat": {
       "type": "String",
       "required": false,
       "length": null,
       "precision": null,
       "scale": null,
       "postgresql": {
-        "columnName": "updatedat",
+        "columnName": "modifiedat",
         "dataType": "timestamp without time zone",
         "dataLength": null,
         "dataPrecision": null,
@@ -477,9 +312,14 @@
   },
   "validations": [],
   "relations": {
-    "isotracking": {
+    "casetracking": {
       "type": "belongsTo",
-      "model": "isotracking",
+      "model": "casetracking",
+      "foreignKey": "parentpid"
+    },
+    "isoresponsetrackings": {
+      "type": "hasMany",
+      "model": "isoresponsetracking",
       "foreignKey": "requestid"
     }
   },

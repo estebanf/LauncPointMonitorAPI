@@ -10,18 +10,18 @@
   "properties": {
     "pid": {
       "type": "Number",
-      "required": false,
+      "id": 1,
+      "required": true,
       "length": null,
       "precision": 32,
       "scale": 0,
-      "id":1,
       "postgresql": {
         "columnName": "pid",
         "dataType": "integer",
         "dataLength": null,
         "dataPrecision": 32,
         "dataScale": 0,
-        "nullable": "YES"
+        "nullable": "NO"
       }
     },
     "caseid": {
@@ -69,29 +69,29 @@
         "nullable": "YES"
       }
     },
-    "iqenqueued": {
-      "type": "Boolean",
+    "iqhold": {
+      "type": "String",
       "required": false,
-      "length": null,
+      "length": 250,
       "precision": null,
       "scale": null,
       "postgresql": {
-        "columnName": "iqenqueued",
-        "dataType": "boolean",
-        "dataLength": null,
+        "columnName": "iqhold",
+        "dataType": "character varying",
+        "dataLength": 250,
         "dataPrecision": null,
         "dataScale": null,
         "nullable": "YES"
       }
     },
-    "iqenqueuedat": {
+    "iqholdat": {
       "type": "String",
       "required": false,
       "length": null,
       "precision": null,
       "scale": null,
       "postgresql": {
-        "columnName": "iqenqueuedat",
+        "columnName": "iqholdat",
         "dataType": "timestamp without time zone",
         "dataLength": null,
         "dataPrecision": null,
@@ -99,59 +99,29 @@
         "nullable": "YES"
       }
     },
-    "iqsent": {
-      "type": "Boolean",
+    "iqcompleted": {
+      "type": "String",
       "required": false,
-      "length": null,
+      "length": 250,
       "precision": null,
       "scale": null,
       "postgresql": {
-        "columnName": "iqsent",
-        "dataType": "boolean",
-        "dataLength": null,
+        "columnName": "iqcompleted",
+        "dataType": "character varying",
+        "dataLength": 250,
         "dataPrecision": null,
         "dataScale": null,
         "nullable": "YES"
       }
     },
-    "iqsentat": {
+    "iqcompletedat": {
       "type": "String",
       "required": false,
       "length": null,
       "precision": null,
       "scale": null,
       "postgresql": {
-        "columnName": "iqsentat",
-        "dataType": "timestamp without time zone",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "iqresponsereceived": {
-      "type": "Boolean",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "iqresponsereceived",
-        "dataType": "boolean",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "YES"
-      }
-    },
-    "iqresponsereceivedat": {
-      "type": "String",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "postgresql": {
-        "columnName": "iqresponsereceivedat",
+        "columnName": "iqcompletedat",
         "dataType": "timestamp without time zone",
         "dataLength": null,
         "dataPrecision": null,
@@ -192,17 +162,21 @@
     "pdid": {
       "type": "String",
       "required": false,
-      "length": null,
+      "length": 250,
       "precision": null,
       "scale": null,
       "postgresql": {
         "columnName": "pdid",
         "dataType": "character varying",
-        "dataLength": null,
+        "dataLength": 250,
         "dataPrecision": null,
         "dataScale": null,
         "nullable": "YES"
       }
     }
-  }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
 }

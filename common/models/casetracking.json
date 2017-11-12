@@ -8,13 +8,28 @@
     }
   },
   "properties": {
+    "casetrackingid": {
+      "type": "String",
+      "id": 1,
+      "required": true,
+      "length": 250,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "casetrackingid",
+        "dataType": "character varying",
+        "dataLength": 250,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "NO"
+      }
+    },
     "caseid": {
       "type": "Number",
       "required": false,
       "length": null,
       "precision": 32,
       "scale": 0,
-      "id":1,
       "postgresql": {
         "columnName": "caseid",
         "dataType": "integer",
@@ -324,5 +339,20 @@
         "nullable": "YES"
       }
     }
-  }
+  },
+  "validations": [],
+  "relations": {
+    "batchtracking": {
+      "type": "belongsTo",
+      "model": "batchtracking",
+      "foreignKey": "batchid"
+    },
+    "isotrackings": {
+      "type": "hasMany",
+      "model": "isotracking",
+      "foreignKey": "parentpid"
+    }
+  },
+  "acls": [],
+  "methods": {}
 }
