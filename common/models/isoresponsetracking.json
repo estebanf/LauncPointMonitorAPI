@@ -69,7 +69,22 @@
         "nullable": "YES"
       }
     },
-    "isoresponsereceived": {
+    "scorevalue": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 32,
+      "scale": 0,
+      "postgresql": {
+        "columnName": "scorevalue",
+        "dataType": "integer",
+        "dataLength": null,
+        "dataPrecision": 32,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+      "isoresponsereceived": {
       "type": "Boolean",
       "required": false,
       "length": null,
