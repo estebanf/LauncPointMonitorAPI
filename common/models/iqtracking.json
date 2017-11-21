@@ -10,11 +10,11 @@
   "properties": {
     "pid": {
       "type": "Number",
+      "id": 1,
       "required": true,
       "length": null,
       "precision": 32,
       "scale": 0,
-      "id": 1,
       "postgresql": {
         "columnName": "pid",
         "dataType": "integer",
@@ -204,5 +204,9 @@
         "nullable": "YES"
       }
     }
-  }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
 }

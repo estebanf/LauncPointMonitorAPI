@@ -1,0 +1,66 @@
+{
+  "name": "LaunchpointCase",
+  "plural": "LaunchpointCases",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "CaseId": {
+      "type": "number",
+      "id": 1,
+      "required": true
+    },
+    "ClientId": {
+      "type": "number",
+      "required": true
+    },
+    "ISOIndicator": {
+      "type": "number",
+      "required": true
+    },
+    "Score": {
+      "type": "number"
+    },
+    "AccidentDate": {
+      "type": "date"
+    },
+    "BenefitAmount": {
+      "type": "number"
+    },
+    "FundingSource": {
+      "type": "string"
+    },
+    "LOB": {
+      "type": "string"
+    },
+    "WorkComp": {
+      "type": "boolean"
+    },
+    "CaseStatus": {
+      "type": "string"
+    },
+    "LifeCycle": {
+      "type": "string"
+    },
+    "CloseReason": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "diaries": {
+      "type": "hasMany",
+      "model": "Diary",
+      "foreignKey": "CaseId"
+    },
+    "activities": {
+      "type": "hasMany",
+      "model": "Activity",
+      "foreignKey": "CaseId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

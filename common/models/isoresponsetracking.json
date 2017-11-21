@@ -84,7 +84,7 @@
         "nullable": "YES"
       }
     },
-      "isoresponsereceived": {
+    "isoresponsereceived": {
       "type": "Boolean",
       "required": false,
       "length": null,

@@ -12,5 +12,15 @@
     "name": "psql",
     "user": "bam",
     "connector": "postgresql"
+  },
+  "mongo": {
+    "host": "bpms.everteam.us",
+    "port": 27017,
+    "url": "mongodb://bpms.everteam.us/launchpoint",
+    "database": "launchpoint",
+    "password": "",
+    "name": "mongo",
+    "user": "",
+    "connector": "mongodb"
   }
 }

@@ -10,11 +10,11 @@
   "properties": {
     "iqlettertrackingid": {
       "type": "String",
+      "id": 1,
       "required": true,
       "length": 250,
       "precision": null,
       "scale": null,
-      "id": 1,
       "postgresql": {
         "columnName": "iqlettertrackingid",
         "dataType": "character varying",
@@ -219,5 +219,9 @@
         "nullable": "YES"
       }
     }
-  }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
 }

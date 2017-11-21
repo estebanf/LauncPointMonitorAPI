@@ -5,8 +5,14 @@ module.exports = {
       url: process.env.DBURL || "postgres://bam:everteam@bpms.everteam.us:5432/bamdb",
       database: process.env.DB || "bamdb",
       password: process.env.DBPASSWORD || "everteam",
-      // name: "psql",
       user: process.env.DBUSER || "bam",
-      connector: "postgresql"    
+      connector: "postgresql"
+    },
+  mongo: {
+      "host": process.env.MONGOHOST || "bpms.everteam.us",
+      "port": process.env.MONGOPORT || 27017,
+      "url": process.env.MONGOURL || "mongodb://bpms.everteam.us/launchpoint",
+      "database": process.env.MONGODB || "launchpoint",
+      "connector": "mongodb"
     }
 }

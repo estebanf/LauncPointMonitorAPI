@@ -1,0 +1,46 @@
+{
+  "name": "Diary",
+  "plural": "Diaries",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "DiaryId": {
+      "type": "number",
+      "id": 1
+    },
+    "ClientId": {
+      "type": "number"
+    },
+    "CaseId": {
+      "type": "number"
+    },
+    "CreateDate": {
+      "type": "date"
+    },
+    "CreatedBy": {
+      "type": "string"
+    },
+    "DiaryType": {
+      "type": "string"
+    },
+    "DiaryStatus": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "launchpointCase": {
+      "type": "belongsTo",
+      "model": "LaunchpointCase",
+      "foreignKey": "CaseId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -41,8 +41,16 @@
     "dataSource": "psql",
     "public": true
   },
-  "iqtracking": {
-    "dataSource": "psql",
+  "LaunchpointCase": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "Diary": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "Activity": {
+    "dataSource": "mongo",
     "public": true
   }
 }

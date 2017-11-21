@@ -1,0 +1,45 @@
+{
+  "name": "Activity",
+  "plural": "Activities",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "ActivityId": {
+      "type": "number"
+    },
+    "ClientId": {
+      "type": "number"
+    },
+    "CaseId": {
+      "type": "number"
+    },
+    "CreateDate": {
+      "type": "date"
+    },
+    "CreatedBy": {
+      "type": "string"
+    },
+    "ActivityType": {
+      "type": "string"
+    },
+    "ActivityCode": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "launchpointCase": {
+      "type": "belongsTo",
+      "model": "LaunchpointCase",
+      "foreignKey": "CaseId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
