@@ -17,6 +17,9 @@
     "CaseId": {
       "type": "number"
     },
+    "DueDate": {
+      "type": "date"
+    },
     "CreateDate": {
       "type": "date"
     },
