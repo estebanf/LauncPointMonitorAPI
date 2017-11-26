@@ -46,6 +46,15 @@
     },
     "CloseReason": {
       "type": "string"
+    },
+    "State": {
+      "type": "string"
+    },
+    "EnvironmentId": {
+      "type": "string"
+    },
+    "CaseSource": {
+      "type": "string"
     }
   },
   "validations": [],
